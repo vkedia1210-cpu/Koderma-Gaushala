@@ -490,3 +490,12 @@ body.kg-home:not(.kg-scrolled) .kg-brand-name, body.kg-home:not(.kg-scrolled) .k
 @media (min-width: 1281px) {
 	.kg-menu > li:hover:not(.is-open) > ul, .kg-menu > li:focus-within:not(.is-open) > ul { opacity: 0; visibility: hidden; transform: translateY(6px); }
 }
+
+/* Two colours only: maroon and saffron (with neutral cream/white backgrounds and dark text) */
+:root { --kg-green: var(--kg-maroon); }
+.kg-price { color: var(--kg-maroon); }
+.kg-btn-wa { background: var(--kg-saffron); border-color: var(--kg-saffron); color: #2b1600; }
+.kg-btn-wa:hover { background: #cf7600; border-color: #cf7600; color: #1f1000; }
+.kg-req { color: var(--kg-maroon); }
+.kg-alert-ok { background: #fbe9d0; color: var(--kg-maroon-dark); border: 1px solid var(--kg-saffron-soft); }
+.kg-alert-err { background: #f8eaec; color: var(--kg-maroon-dark); border: 1px solid #e3bcc2; }
