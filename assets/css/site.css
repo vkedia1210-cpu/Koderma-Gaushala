@@ -484,3 +484,4 @@ body.kg-home:not(.kg-scrolled) .kg-brand-name, body.kg-home:not(.kg-scrolled) .k
 	.kg-hero-banner::after, .kg-hero-banner.kg-photo-bg::after { background: linear-gradient(0deg, rgba(40, 8, 14, .90) 0%, rgba(40, 8, 14, .45) 45%, rgba(20, 4, 8, .10) 75%, rgba(20, 4, 8, .45) 100%); }
 }
 @media (max-width: 1280px) { body.kg-home .kg-header-inner { min-height: 66px; } }
+.kg-menu-heading { cursor: pointer; user-select: none; }

@@ -106,3 +106,19 @@ document.querySelectorAll('.kg-hero-video').forEach(function (v) { v.addEventLis
   bg.src = '/assets/video/hero-banner-' + size + '.mp4';
   var p = bg.play(); if (p && p.catch) { p.catch(function () {}); }
 })();
+
+// Menu headings open their dropdown only; they no longer link to a page
+(function () {
+  document.querySelectorAll('.kg-menu > li.menu-item-has-children > a, .kg-menu > li.page_item_has_children > a').forEach(function (a) {
+    var li = a.parentElement;
+    var btn = li.querySelector(':scope > .kg-sub-toggle');
+    a.removeAttribute('href');
+    a.setAttribute('role', 'button');
+    a.setAttribute('tabindex', '0');
+    a.setAttribute('aria-haspopup', 'true');
+    a.classList.add('kg-menu-heading');
+    var open = function (e) { e.preventDefault(); e.stopPropagation(); if (btn) { btn.click(); } else { li.classList.toggle('is-open'); } };
+    a.addEventListener('click', open);
+    a.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { open(e); } });
+  });
+})();
