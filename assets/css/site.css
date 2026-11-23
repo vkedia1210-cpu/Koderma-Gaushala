@@ -485,3 +485,8 @@ body.kg-home:not(.kg-scrolled) .kg-brand-name, body.kg-home:not(.kg-scrolled) .k
 }
 @media (max-width: 1280px) { body.kg-home .kg-header-inner { min-height: 66px; } }
 .kg-menu-heading { cursor: pointer; user-select: none; }
+
+/* Dropdowns open only on click, never on hover */
+@media (min-width: 1281px) {
+	.kg-menu > li:hover:not(.is-open) > ul, .kg-menu > li:focus-within:not(.is-open) > ul { opacity: 0; visibility: hidden; transform: translateY(6px); }
+}
