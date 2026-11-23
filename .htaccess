@@ -1,0 +1,6 @@
+ErrorDocument 404 /404.html
+DirectoryIndex index.html index.php
+Options -Indexes
+<FilesMatch "^config\.php$">
+  Require all denied
+</FilesMatch>
